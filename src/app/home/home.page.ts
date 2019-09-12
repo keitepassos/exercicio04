@@ -7,6 +7,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  private campo : String = '0';
+
   constructor() {}
+
+  digitarNumero(digito : String){
+    if (this.campo == '0'){
+      this.limparCampo();
+    }
+    this.campo = `${this.campo} ${digito}`;  
+  }
+
+  zerarCampo(){
+    this.campo = '0';
+  }
+
+  limparCampo(){
+    this.campo = '';
+  }
 
 }
