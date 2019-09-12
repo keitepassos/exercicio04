@@ -11,6 +11,7 @@ export class HomePage {
 
   constructor() {}
 
+
   digitarNumero(digito : String){
     if (this.campo == '0'){
       this.limparCampo();
