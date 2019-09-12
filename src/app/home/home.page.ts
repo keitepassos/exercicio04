@@ -16,7 +16,7 @@ export class HomePage {
     if (this.campo == '0'){
       this.limparCampo();
     }
-    this.campo = `${this.campo} ${digito}`;  
+    this.preencherCampo(digito);  
   }
 
   zerarCampo(){
@@ -27,4 +27,11 @@ export class HomePage {
     this.campo = '';
   }
 
+  digitarOperacao(operacao : String){
+    this.preencherCampo(operacao);  
+  }
+
+  private preencherCampo(texto: String) {
+    this.campo = `${this.campo} ${texto}`;
+  }
 }

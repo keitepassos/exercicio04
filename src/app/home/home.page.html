@@ -30,7 +30,7 @@
             <ion-button expand="block" color="primary">%</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button expand="block" color="warning">&#247;</ion-button>
+            <ion-button (click)="digitarOperacao(' / ')"  expand="block" color="warning">&#247;</ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -44,7 +44,7 @@
             <ion-button (click)="digitarNumero('9')" expand="block" color="primary">9</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button expand="block" color="warning">x</ion-button>
+            <ion-button (click)="digitarOperacao(' x ')" expand="block" color="warning">x</ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -58,7 +58,7 @@
               <ion-button (click)="digitarNumero('6')" expand="block" color="primary">6</ion-button>
             </ion-col>
             <ion-col>
-              <ion-button expand="block" color="warning">-</ion-button>
+              <ion-button (click)="digitarOperacao(' - ')" expand="block" color="warning">-</ion-button>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -72,7 +72,7 @@
                 <ion-button (click)="digitarNumero('3')" expand="block" color="primary">3</ion-button>
               </ion-col>
               <ion-col>
-                <ion-button expand="block" color="warning">+</ion-button>
+                <ion-button (click)="digitarOperacao(' + ')" expand="block" color="warning">+</ion-button>
               </ion-col>
             </ion-row>
             <ion-row>
