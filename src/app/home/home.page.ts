@@ -28,10 +28,25 @@ export class HomePage {
   }
 
   digitarOperacao(operacao : String){
-    this.preencherCampo(operacao);  
+    let ultimo_campo;
+    try{
+      ultimo_campo = this.campo.substr(-1)
+    }catch(e){}  
+    if(ultimo_campo!='' && (ultimo_campo !='+' && ultimo_campo !='-' && ultimo_campo !='/' && ultimo_campo !='*'))
+      this.preencherCampo(operacao)  
   }
 
   private preencherCampo(texto: String) {
-    this.campo = `${this.campo} ${texto}`;
+     this.campo = `${this.campo}${texto}`;
+  }
+
+  resultado(){
+    let resultado=''
+    try{
+      resultado = eval(this.campo.toString())
+      this.campo = '' 
+      this.campo = resultado   
+    }catch(e){ console.log(e)}
+   
   }
 }
